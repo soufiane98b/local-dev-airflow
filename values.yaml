@@ -1,19 +1,10 @@
-
 hostPath:
-  dags: ""
-  logs: ""
+  dags: "/Users/soufiane/Documents/GitHub/local-dev-airflow/dags"
 
 airflow:
-  executor: KubernetesExecutor
   dags:
     persistence:
       enabled: true
       existingClaim: airflow-dags
-      storageClassName: local-storage
-  logs:
-    persistence:
-      enabled: true
-      existingClaim: airflow-logs
-      storageClassName: local-storage    
-  redis:
-    enabled: false
+      storageClassName: local-storage 
+  
