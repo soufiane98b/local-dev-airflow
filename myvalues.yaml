@@ -1,0 +1,17 @@
+
+extraPipPackages:
+  - "openlineage-airflow==1.6.2"
+
+env:
+  - name: OPENLINEAGE_NAMESPACE
+    value: "airflow"
+  - name: AIRFLOW__LINEAGE__BACKEND
+    value: openlineage.lineage_backend.OpenLineageBackend
+    
+dags:
+  persistence:
+    enabled: true
+    existingClaim: airflow-dags
+    storageClassName: local-storage
+
+  

@@ -5,7 +5,7 @@
 
 ## Create cluster with k3d
 
-k3d cluster create mycluster -v /your/local/path/dags:/data/myvolume
+k3d cluster create mycluster -v /Users/soufiane/Documents/GitHub/local-dev-airflow/dags:/data/myvolume
 
 ## Install official helm chart of airflow 
 helm upgrade --install airflow apache-airflow/airflow --namespace airflow --create-namespace
@@ -24,4 +24,14 @@ helm upgrade airflow apache-airflow/airflow -n airflow \
 
 Finally all the dags you create in the folder dags will be visible
 
+## To add open lineage with marquez to airflow
+helm upgrade airflow apache-airflow/airflow -f myvalues.yaml -n airflow
+
+
 ## Ps: don't forget to port forward the webserver of airflow to access to the web api
+
+
+## Commands good to know : 
+helm get values  airflow  -n airflow
+helm get all  airflow  -n airflow > values.yaml
+helm rollback airflow 2 -n airflow

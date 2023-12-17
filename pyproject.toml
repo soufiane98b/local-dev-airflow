@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "local-dev-airflow"
+version = "0.1.0"
+description = ""
+authors = ["Soufiane <soufiane.boustique00@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+apache-airflow = "^2.7.3"
+apache-airflow-providers-openlineage = "^1.3.0"
+openlineage-airflow = "^1.6.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
