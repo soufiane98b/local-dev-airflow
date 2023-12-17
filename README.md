@@ -51,3 +51,4 @@ helm upgrade airflow apache-airflow/airflow -f myvalues.yaml -n airflow
 helm get values  airflow  -n airflow
 helm get all  airflow  -n airflow > values.yaml
 helm rollback airflow 2 -n airflow
+k3d cluster delete mycluster 
