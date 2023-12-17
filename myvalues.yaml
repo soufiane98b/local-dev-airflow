@@ -12,4 +12,8 @@ dags:
 
 defaultAirflowRepository: mycluster-registry:51697/mon-airflow-personnalise
 defaultAirflowTag: latest 
-imagePullPolicy: Always
+images:
+  airflow:
+    pullPolicy: Always
+spec:
+  imagePullPolicy: Always
