@@ -1,7 +1,3 @@
-
-extraPipPackages:
-  - "openlineage-airflow==1.6.2"
-
 env:
   - name: OPENLINEAGE_NAMESPACE
     value: "airflow"
@@ -14,4 +10,6 @@ dags:
     existingClaim: airflow-dags
     storageClassName: local-storage
 
-  
+defaultAirflowRepository: mycluster-registry:51697/mon-airflow-personnalise
+defaultAirflowTag: latest 
+imagePullPolicy: Always
