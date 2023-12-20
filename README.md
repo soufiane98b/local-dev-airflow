@@ -11,7 +11,7 @@ docker build -t mon-airflow-personnalise:latest .
 
 ## Create cluster with k3d
 
-k3d cluster create mycluster -v /Users/soufiane/Documents/GitHub/local-dev-airflow/dags:/data/myvolume --registry-create mycluster-registry
+k3d cluster create mycluster -v dags:/data/myvolume --registry-create mycluster-registry
 
 ## Tag Image for Local Registry and push 
 
